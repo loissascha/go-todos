@@ -16,8 +16,8 @@ func main() {
 	add := flag.Bool("a", false, "Add a new todo")
 	addLong := flag.Bool("add", false, "Add a new todo")
 
-	ls := flag.Bool("ls", false, "List all todos")
-	lsLong := flag.Bool("list", false, "List all todos")
+	flag.Bool("ls", false, "List all todos")
+	flag.Bool("list", false, "List all todos")
 
 	rm := flag.Bool("rm", false, "Remove a todo")
 	rmLong := flag.Bool("remove", false, "Remove a todo")
@@ -26,8 +26,6 @@ func main() {
 
 	if *add || *addLong {
 		addOperation()
-	} else if *ls || *lsLong {
-		listOperation()
 	} else if *rm || *rmLong {
 		removeOperation()
 	} else {
